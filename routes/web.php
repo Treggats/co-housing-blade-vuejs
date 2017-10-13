@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Routing\Router;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,3 +14,7 @@
 */
 
 Route::get('/', 'PageController@index');
+
+Route::group(['prefix' => 'backoffice'], function (Router $router) {
+    $router->get('/', 'Backoffice\PageController@index');
+});
