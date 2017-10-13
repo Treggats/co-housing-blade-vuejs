@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backoffice;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class BackofficePageController extends Controller
+class PageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class BackofficePageController extends Controller
      */
     public function index()
     {
-        //
+        return view('backoffice.index');
     }
 
     /**
